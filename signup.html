@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>إنشاء حساب</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>📝 إنشاء حساب</h1>
+  </header>
+
+  <section class="login-form">
+    <form onsubmit="registerUser(); return false;">
+      <input type="text" id="username" placeholder="اسم المستخدم" required />
+      <input type="password" id="password" placeholder="كلمة المرور" required />
+      <button type="submit">تسجيل</button>
+    </form>
+    <p>لديك حساب؟ <a href="login.html">سجّل الدخول</a></p>
+  </section>
+
+  <script>
+    function registerUser() {
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+
+      localStorage.setItem("user", username);
+      localStorage.setItem("pass", password);
+
+      alert("✅ تم إنشاء الحساب بنجاح!");
+      window.location.href = "login.html";
+    }
+  </script>
+
+  <footer>
+    &copy; 2025 - مكتبة الظلام
+  </footer>
+</body>
+</html>

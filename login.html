@@ -1,25 +1,43 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <title>تسجيل الدخول</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>تسجيل الدخول</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <h1>🔐 تسجيل الدخول</h1>
-    </header>
+  <header>
+    <h1>🔐 تسجيل الدخول</h1>
+  </header>
 
-    <section class="login-form">
-        <form onsubmit="alert('✅ تم تسجيل الدخول بنجاح!'); return false;">
-            <input type="text" placeholder="اسم المستخدم" required>
-            <input type="password" placeholder="كلمة المرور" required>
-            <button type="submit">دخول</button>
-        </form>
-    </section>
+  <section class="login-form">
+    <form onsubmit="loginUser(); return false;">
+      <input type="text" id="username" placeholder="اسم المستخدم" required />
+      <input type="password" id="password" placeholder="كلمة المرور" required />
+      <button type="submit">دخول</button>
+    </form>
+    <p>لا تملك حسابًا؟ <a href="signup.html">إنشاء حساب</a></p>
+  </section>
 
-    <footer>
-        &copy; 2025 - مكتبة الظلام
-    </footer>
+  <script>
+    function loginUser() {
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+
+      const storedUser = localStorage.getItem("user");
+      const storedPass = localStorage.getItem("pass");
+
+      if (username === storedUser && password === storedPass) {
+        alert("✅ تم تسجيل الدخول بنجاح!");
+        window.location.href = "categories.html"; // أو صفحة القصص
+      } else {
+        alert("❌ اسم المستخدم أو كلمة المرور غير صحيحة.");
+      }
+    }
+  </script>
+
+  <footer>
+    &copy; 2025 - مكتبة الظلام
+  </footer>
 </body>
 </html>
