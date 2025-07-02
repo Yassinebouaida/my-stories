@@ -1,0 +1,132 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #1e1e1e;
+    text-align: center;
+    padding: 30px 10px;
+    border-bottom: 3px solid #008cff;
+}
+
+header h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #00ccff;
+}
+
+header p {
+    font-size: 18px;
+    color: #cccccc;
+}
+
+.home-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 30px auto;
+    align-items: center;
+}
+
+.home-buttons a {
+    padding: 12px 25px;
+    background-color: #00ccff;
+    color: black;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.home-buttons a:hover {
+    background-color: #0080cc;
+    color: white;
+}
+
+.stories {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.story-box {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 140, 255, 0.2);
+}
+
+.story-box h3 {
+    color: #00ccff;
+    margin-bottom: 10px;
+}
+
+.story-box iframe {
+    width: 100%;
+    height: 400px;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.story-box a {
+    display: inline-block;
+    background-color: #00ccff;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.story-box a:hover {
+    background-color: #0080cc;
+    color: white;
+}
+
+img.cover {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.contact-info, .about {
+    padding: 30px;
+    text-align: center;
+    line-height: 2;
+    color: #ddd;
+}
+
+.login-form {
+    text-align: center;
+    padding: 30px;
+}
+
+.login-form input {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    width: 80%;
+}
+
+.login-form button {
+    padding: 12px 30px;
+    background-color: #00ccff;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+}
